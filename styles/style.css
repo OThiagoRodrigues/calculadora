@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&family=Press+Start+2P&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --background: #865DFF;
+    --corpo: #FFA3FD;
+    --visor: #191825;
+    --teclado: #191825;
+    --teclado-hover: #FFA3FD;
+    --tecla-destaque: #E384FF;
+    --cor-da-fonte: #ffffff;
+
+    --fonte-titulo: 'Press Start 2P', cursive;
+    --fonte-calculadora: 'Old Standard TT', serif;
+}
+
+body {
+    color: var(--cor-da-fonte);
+    background-color: var(--background);   
+}
+
+.align {
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--fonte-titulo);
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+.calculadora {
+    margin-top: 100px;
+    border: 3px solid;
+    padding: 40px 10px 20px 10px;
+    max-width: fit-content;
+    background-color: var(--corpo);
+    border-radius: 16px;
+    border: none;
+    box-shadow: #19182544 20px 30px;
+}
+
+.visor {
+    font-family: var(--fonte-titulo);
+    font-size: 22px;
+    padding: 10px;
+    background-color: var(--visor);
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    direction: rtl;
+    display: flex;
+    align-items: end;
+    box-shadow: var(--tecla-destaque) 0 -10px;
+}
+
+.display-underline {
+    color: var(--background);
+    animation: piscaPisca 0.8s infinite;
+}
+
+@keyframes piscaPisca {
+    0% { color: var(--background) }
+    50% { color: var(--visor); }
+}
+
+.teclado {
+    display: flex;
+    flex-direction: inline;
+    justify-content: baseline;
+}
+
+.botao {
+    width: 60px;
+    height: 60px;
+    color: var(--cor-da-fonte);
+    background-color: var(--teclado);
+    font-family: var(--fonte-calculadora);
+    font-size: 20px;
+}
+
+#botao__destaque {
+    background-color: var(--tecla-destaque);
+}
+
+#botao__destaque:hover {
+    background-color: var(--teclado-hover);
+}
+
+#botao__destaque:active {
+    background-color: var(--background);
+}
+
+.botao:hover {
+    background-color: var(--teclado-hover);
+}
+
+.botao:active {
+    background-color: var(--background);
+}
+
+.imagens {
+    width: 32px;
+}
